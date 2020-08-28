@@ -1,0 +1,539 @@
+.page-header__top {}
+
+.page-header__inner {
+    background-image: url(images/main_visual.jpg);
+    height: 480px;
+    padding: 0 100px;
+    position: relative;
+    display:flex;
+    align-items:center;
+}
+a{
+    text-decoration: none;
+}
+.common-inner{
+    width:1000px;
+    margin:0 auto;
+}
+
+.black-belt {
+    background-color: #000000;
+    color: white;
+    padding: 5px 8px;
+    /*
+    position:absolute;
+    top:190px二つともが同じ高さになってしまい重なるから、セレクタ は.page-header-titleにする;
+*/
+
+}
+
+.typo-bold {
+    font-weight: bold;
+}
+
+.page-header__title {
+    position: absolute;
+    top: 190px;
+    width: 410px;
+    font-size: 36px;
+    line-height: 1.5;
+    /*    line-heightで、上下の差が縮まった*/
+
+}
+
+.page-header__logo {
+    position: absolute;
+    top:0;
+    left:0;
+}
+.page-header__campaign {
+    position:absolute;
+    bottom:10px;
+    right:10px;
+}
+.page-header__campaign:hover{
+background-color:#298DD5
+}
+.page-header__campaign a{
+    font-size:24px;
+    color:#298DD5;
+    height:180px;
+    width:180px;
+    background-color:white;
+    border:5px solid #298DD5;
+    border-radius:50%;
+    display:flex;
+    line-height:1.5;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    
+}
+.page-header__nav{
+    height:75px;
+    display:flex;
+    box-shadow:0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size:17px;
+    align-items:center;
+    background-color:#298DD5;
+    position:relative;
+}
+.page-header__nav--list{
+    display:flex;
+    padding-left:100px;
+/*
+    font-size:17px;
+    align-items:center;
+    background-color:#298DD5;
+*/
+    
+}
+.page-header__nav--list a{
+    color:white;
+    list-style: none;
+    padding:10px;
+}
+.page-header__nav--list :hover{
+    opacity:0.7;
+}
+.page-header__nav--list li:not(:last-child){
+    margin-right:30px;
+}
+.page-header__nav--list li:first-child{
+    margin-left:-10px;
+}
+
+.page-header__contact a{
+    display:inline-block;
+    font-size:16px;
+    line-height:1;
+/*    これで、高さがnavとそろった*/
+/*    height;75px;*/
+    padding:30px 50px;
+/*    width:200px;*/
+    position:absolute;
+    right:0;
+    top:0;
+    background-color:#A9D92F;
+    z-index:1;
+    color:white;
+    
+}
+.page-header__contact a::after{
+    content:'';
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:#fff;
+    opacity:0;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:1;
+    transition:opacity 0.2s ease 0s;
+}
+/*
+.page-header__contact a:after:hover{
+    opacity:0.3;
+}
+*/
+.page-header__contact a:hover::after{
+    opacity:0.3;
+}
+.news-lists{
+    width:640px;
+/*
+    display:flex;
+    flex-direction:column htmlでそれぞれの行をliで囲んだから、必要ない。;
+*/
+    
+}
+.news-lists:not(:last-child){
+    margin:0 auto 50px;
+    
+}
+.news-list:not(:last-child){
+    margin-bottom:20px;
+    
+}
+.news-lists li a{
+    display:flex;
+    justify-content:space-between;
+    font-size:16px;
+    line-height:1.75;
+    color:black;
+}
+.news-lists li a:hover {
+    text-decoration:underline;
+}
+.news-lists span{
+    width:470px;
+}
+.news-section p{
+    text-align:center;
+}
+.news-section a{
+    font-size:14px;
+color:#298DD5;
+}
+.news-section a:hover{
+    text-decoration:underline;
+}
+section{
+    padding:100px 0;
+    
+}
+.section-title{
+    margin-bottom:50px;
+    font-size:32px;
+    line-height:1.0;
+    text-align:center;
+}
+.section-title span {
+    display:inline-block;
+    padding:10px 22px;
+    position:relative;
+}
+.section-title span:before, .section-title span:after{
+    content:'';
+    display:block;
+    width:16px;
+    height:16px;
+    position:absolute;
+    z-index:1;
+}
+
+.section-title span:before{
+    top:0;
+    left:0;
+    background: linear-gradient(135deg, #008dd5 0%, #008dd5 50%, transparent 50%, transparent 100%);
+}
+.section-title span:after{
+    right:0;
+    bottom:0;
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, #008dd5 50%, #008dd5 100%);
+}
+.feature-section{
+    background-color: #E6F6FF;
+}
+.feature-left{
+    width:460px;
+    margin-right:70px;
+    font-size:16px;
+    line-height:1.5;
+}
+.feature-inner{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+/*    ↑で.featureright .feature-leftが並んで、その下に.primary-buttonが来る*/
+    margin:0 auto;
+    background-color:white;
+    padding:60px 0;
+}
+.feature-icon-list__item:nth-child(-n+3){
+    margin-bottom:20px;
+}
+.feature-icon-list__item:nth-child(4){
+    margin-left:40px;
+    
+}
+.feature-icon-list__item:not(:last-child){
+    margin-right:40px;
+}
+.feature-block__icons{
+    display:flex;
+    flex-wrap:wrap;
+    width:360px;
+}
+.feature-block__button{
+    margin-top:40px;
+}
+.advantage-list__item{
+    display:flex;
+    align-items:center;
+    margin-bottom:40px;
+}
+.advantage-right{
+}
+
+.advantage-list__image img{
+    width:300px;
+    height:300px;
+    margin-right:40px;
+    border-radius:50%;
+    overflow:hidden;
+}
+.advantege-right{
+    flex:1;
+}
+.advantage-list__title{
+    margin-bottom:20px;
+    font-size:24px;
+    line-height:1.5;
+    border-bottom:2px solid #008DD5;
+}
+.advantage-list__text{
+    font-size:16px;
+    line-height:2;
+}
+.voice-block {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.client-voice__inner {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+figcaption {
+/*    min-height: calc((1em * 1.75 * 2) + 28px);*/
+    padding: 14px 20px;
+    box-sizing: border-box;
+    background-color: #008DD5;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #fff;
+}
+
+.voice-block__message {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+#client-voice {
+    background-color: #E6F6FF;
+}
+
+.voice-list {
+    padding: 60px;
+    background-color: #fff;
+}
+
+.voice-list::after {
+    display: block;
+    clear: both;
+    content: "";
+    /*    contentプロパティを使えるのは::after::before疑似要素のみ
+    */
+}
+
+.voice-block__client-image img {
+    width: 400px;
+}
+
+.voice-block__client-image {
+    width: 400px;
+    height: 300
+}
+
+.voice-list__item {
+    width: 400px;
+}
+.voice-block__client-image{
+    min-height:calc(1em * 1.75 * 2);
+}
+/*
+.voice-list__item:nth-child(1) .voice-list__item:nth-child(4){
+    float:left;
+}
+*/
+/*
+.voice-list__item:nth-child(2) .voice-list__item:nth-child(3){
+    float:right;
+}
+複数のセレクタを指定するときは、カンマを使う
+*/
+.voice-list__item:nth-child(1),
+.voice-list__item:nth-child(4) {
+    float: left;
+}
+
+.voice-list__item:nth-child(2),
+.voice-list__item:nth-child(3) {
+    float: right;
+}
+
+.voice-list__item:nth-child(n+3) {
+    margin-top: 80px;
+}
+
+
+.primary-button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-width:280px;
+/*    長い文字列が入っても大丈夫*/
+    padding:0 20px;
+    box-sizing:border-box;
+/*    中身がどんなに長くなっても最低２０pxが左右に余白ができる*/
+    height:60px;
+    font-size:16px;
+    color:#008DD5;
+    background-color:#fff;
+    border:1px solid #008DD5;
+    border-radius:4px;
+    position:relative;
+    transition:background-color 0.2s ease 0s,color 0.2s ease 0s;
+/*    transitionにプロパティを複数指定するには？*/
+/*    transitionプロパティで、プロパティごとに変化する時間、変化対象をコンマで区切って指定する。*/
+/*    transition-property:background-color,color;
+    */
+}
+.primary-button::before{
+    content:'';
+    display:block;
+    width:10px;
+    height:10px;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    z-index:1;
+}
+.primary-button::before{
+    background: linear-gradient(135deg, transparent 0%, transparent 50%, #008DD5 50%, #008DD5 100%);
+    opacity:1;
+}
+.primary-button::before,.primary-button::after{
+    content:'';
+    display:block;
+    width:10px;
+    height:10px;
+    position:absolute;
+    right:5px;
+    bottom:5px;
+    z-index:1;
+    transition:opacity 0.2s ease 0s;
+}
+.primary-button::after{
+    background:linear-gradient(135deg, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+    opacity:0;
+}
+.primary-button:hover{
+    background-color:#008DD5;
+    color:#fff;
+}
+.primary-button:hover::before{
+    opacity:0;
+    
+}
+.primary-button:hover::after{
+    opacity:1;
+}
+.primary-button__monochorme{
+    color:#333;
+    border-color:#333;
+    margin:0 auto;
+}
+.primary-button__monochorme::before{
+    background:linear-gradient(135deg, transparent 0%, transparent 50%, #333 50%, #333 100%);
+    
+}
+.contact form{
+    width:600px;
+    margin:0 auto;
+}
+.contact-inner{
+    width:600px;
+    margin:0 auto;
+    
+}
+.form-parts{
+    display:block;
+    margin-bottom:30px;
+}
+.form-part__label{
+    display:block;
+    margin-bottom:10px;
+    font-size:16px;
+    line-height:1;
+}
+input[type=text],
+input[type=email]{
+    display:block;
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    border:1px solid #000;
+    border-radius:4px;
+    font-size:16px;
+}
+.select-wrapper{
+    display:block;
+    width:200px;
+    height:40px;
+    border:1px solid #000;
+    border-radius:4px;
+    box-sizing:boder-box;
+    position:relative;
+}
+.select-wrapper select{
+    width:100%;
+    height:100%;
+    padding-left:10px;
+    font-size:16px;
+    
+}
+.select-wrapper::after{
+    content:'';
+    display:block;
+    width:12px;
+    height:9px;
+    background:url(images/icon-triangle.png);
+    position:absolute;
+    top:50%;
+    right:10px;
+    z-index:1;
+    transform:translateY(-50%);
+}
+textarea{
+    width:600px;
+    height:200px;
+    padding:10px;
+    box-sizing:border-box;
+    border:1px solid #000;
+    border-radius:4px;
+    font-size:16px;
+    line-height:1.75;
+    resize:none;
+}
+.contact-form__send-button{
+    margin:50px auto 0;
+
+}
+footer{
+    height:275px;
+    background-color:#298DD5;
+    padding:50px 0;
+}
+.page-footer__nav{
+    display:flex;
+    color:white;
+}
+.footer-nav-block{
+    flex-direction:column;
+/*    ↑で縦に並べられた*/
+    
+}
+.footer-nav-block :not(:last-child){
+    margin-right:100px;
+}
+.footer-nav-block__category{
+    margin-bottom:40px;
+    font-size:15px;
+    line-height:1.0;
+    color:#fff;
+}
+.footer-nav-block__list a{
+    color:white;
+    font-size:15px;
+    
+}
+.footer-nav-block__list a:hover{
+    text-decoration: underline;
+}
